@@ -1,9 +1,3 @@
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/wait.h>
-#include <unistd.h>
 #include "shell.h"
 
 /**
@@ -83,11 +77,14 @@ void shell_exec(char **args)
 
 int main(void)
 {
+	char *line;
+	char **tokens;
+
 	while (true)
 	{
 		printf("$ ");
-		char *line = shell_read_line();
-		char **tokens = shell_split_line(line);
+		line = shell_read_line();
+		tokens = shell_split_line(line);
 
 		if (tokens[0] != NULL)
 		{
