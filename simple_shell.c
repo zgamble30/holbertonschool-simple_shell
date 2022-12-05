@@ -49,7 +49,6 @@ char *shell_read_line(void)
 void shell_exec(char **args)
 {
 	pid_t child_pid = fork();
-	int status;
 
 	if (child_pid == 0)
 	{
@@ -60,6 +59,8 @@ void shell_exec(char **args)
 
 	else if (child_pid > 0)
 	{
+		int status;
+
 		wait(&status);
 	}
 
