@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdbool.h>
+#include "sys/wait.h"
 
 char **shell_split_line(char *line);
 char *shell_read_line(void);
