@@ -12,7 +12,7 @@ char **shell_split_line(char *line)
 	int capacity = 16;
 	char **tokens = malloc(capacity * sizeof(char *));
 
-	char *delimiters = "\t\r\n";
+	char *delimiters = " \t\r\n";
 	char *token = strtok(line, delimiters);
 
 	while (token != NULL)
