@@ -12,7 +12,7 @@ char **shell_split_line(char *line)
 	int capacity = 16;
 	char **tokens = malloc(capacity * sizeof(char *));
 
-	char *delimiters = " \t\r\n";
+	char *delimiters = " \n";
 	char *token = strtok(line, delimiters);
 
 	while (token != NULL)
@@ -64,7 +64,7 @@ void shell_exec(char **args)
 	if (child_pid == 0)
 	{
 		execve(args[0], args, NULL);
-		perror("Shell");
+		perror("Error1");
 		exit(1);
 	}
 
@@ -77,7 +77,7 @@ void shell_exec(char **args)
 
 	else
 	{
-		perror("Shell");
+		perror("Error2");
 	}
 }
 
@@ -86,14 +86,14 @@ void shell_exec(char **args)
  * Return: 0 always.
  */
 
-int main(void)
+int main(__attribute__((unused)) int ac, __attribute__((unused)) char **av)
 {
 	char *line;
 	char **tokens;
 
 	while (true)
 	{
-		printf("$ ");
+		printf("($) ");
 		line = shell_read_line();
 		if (line == NULL)
 		{
@@ -109,4 +109,5 @@ int main(void)
 		free(tokens);
 		free(line);
 	}
+	return (0);
 }
