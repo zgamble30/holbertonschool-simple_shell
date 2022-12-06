@@ -83,6 +83,8 @@ void shell_exec(char **args)
 
 /**
  * main - runs the shell.
+ * @ac: number of arguments.
+ * @av: list of arguments.
  * Return: 0 always.
  */
 
