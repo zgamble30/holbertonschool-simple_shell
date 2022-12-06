@@ -89,6 +89,10 @@ int main(void)
 	{
 		printf("$ ");
 		line = shell_read_line();
+		if (line == NULL)
+		{
+			exit(0);
+		}
 		tokens = shell_split_line(line);
 
 		if (tokens[0] != NULL)
