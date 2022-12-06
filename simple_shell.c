@@ -34,10 +34,15 @@ char **shell_split_line(char *line)
 
 char *shell_read_line(void)
 {
+	int temp;
 	char *line = NULL;
 	size_t buflen = 0;
 
-	getline(&line, &buflen, stdin);
+	temp = getline(&line, &buflen, stdin);
+	if (temp == EOF)
+	{
+		exit(0);
+	}
 	return (line);
 }
 
