@@ -20,6 +20,12 @@ char **shell_split_line(char *line)
 		tokens[length] = token;
 		length++;
 
+		if (length >= capacity)
+		{
+			capacity = (int) (capacity * 1.5);
+			tokens = realloc(tokens, capacity * sizeof(char *));
+		}
+
 		token = strtok(NULL, delimiters);
 	}
 
