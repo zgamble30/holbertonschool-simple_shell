@@ -41,6 +41,7 @@ char *shell_read_line(void)
 	temp = getline(&line, &buflen, stdin);
 	if (temp == EOF)
 	{
+		free(line);
 		exit(0);
 	}
 	return (line);
