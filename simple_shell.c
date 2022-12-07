@@ -47,6 +47,8 @@ char *shell_read_line(void)
 	temp = getline(&line, &buflen, stdin);
 	if (temp == EOF)
 	{
+		if (isatty(STDIN_FILENO))
+			write(1, "\n", 1);
 		exit(0);
 	}
 	return (line);
@@ -95,7 +97,10 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **av)
 
 	while (true)
 	{
-		printf("($) ");
+		if (isatty(STDIN_FILENO))
+		{
+			printf("($) ");
+		}
 		line = shell_read_line();
 		if (line == NULL)
 		{
