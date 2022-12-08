@@ -17,7 +17,7 @@
 
 .SH FILES
 
-.B main.h, execFind.c, shell.c, README.md, AUTHORS
+.B shell.h, shell_read_line, shell_get_line, shell_exec, simple_shell.c, README.md, AUTHORS
 
 .SH INSTALLATION
 
@@ -34,7 +34,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 .B To display the contents of a file, see example below. Write:
 
 .B ./hsh
-cat main.h
+cat shell.h
 
  #ifndef HEADER
  #define HEADER
