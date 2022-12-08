@@ -73,6 +73,7 @@ You don’t have to:
 * Usage: exit
 * You don’t have to handle any argument to the built-in exit
 
+
 #### 6. Simple shell 1.0
 
 * Implement the env built-in, that prints the current environment
