@@ -2,20 +2,20 @@
 
 ## Description
 This project involves learning about the following concepts:
- * Who designed and implemented the original Unix operating system
- * Who wrote the first version of the UNIX shell
- * Who invented the B programming language (the direct predecessor to the C programming language)
- * Who is Ken Thompson
- * How does a shell work
- * What is a pid and a ppid
- * How to manipulate the environment of the current process
- * What is the difference between a function and a system call
- * How to create processes
- * What are the three prototypes of main
- * How does the shell use the PATH to find the programs
- * How to execute another program with the execve system call
- * How to suspend the execution of a process until one of its children terminates
- * What is EOF / “end-of-file”?
+* Who designed and implemented the original Unix operating system
+* Who wrote the first version of the UNIX shell
+* Who invented the B programming language (the direct predecessor to the C programming language)
+* Who is Ken Thompson
+* How does a shell work
+* What is a pid and a ppid
+* How to manipulate the environment of the current process
+* What is the difference between a function and a system call
+* How to create processes
+* What are the three prototypes of main
+* How does the shell use the PATH to find the programs
+* How to execute another program with the execve system call
+* How to suspend the execution of a process until one of its children terminates
+* What is EOF / “end-of-file”?
 
 
 ## Compilation
@@ -27,9 +27,9 @@ This project involves learning about the following concepts:
 ## Tasks:
 
 #### 0. README, man, AUTHORS
- * Write a README
- * Write a man for your shell.
- * You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository.
+* Write a README
+* Write a man for your shell.
+* You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository.
 
 
 #### 1. Betty would be proud
@@ -56,7 +56,7 @@ You don’t have to:
 
 #### 3. Simple shell 0.2
 
- * Handle command lines with arguments
+* Handle command lines with arguments
 
 
 #### 4. Simple shell 0.3
@@ -66,10 +66,10 @@ You don’t have to:
 
 #### 5. Simple shell 0.4
 
- * Implement the exit built-in, that exits the shell
- * Usage: exit
- * You don’t have to handle any argument to the built-in exit
+* Implement the exit built-in, that exits the shell
+* Usage: exit
+* You don’t have to handle any argument to the built-in exit
 
 #### 6. Simple shell 1.0
 
- * Implement the env built-in, that prints the current environment
+* Implement the env built-in, that prints the current environment
