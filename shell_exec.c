@@ -7,12 +7,12 @@
 void shell_exec(char **args)
 {
 	pid_t child_pid;
-		
+
 	if (strcmp(args[0], "exit") == 0)
 	{
 		exit(0);
 	}
-		
+
 	child_pid = fork();
 
 	if (child_pid == 0)
