@@ -18,11 +18,17 @@ This project involves learning about the following concepts:
 * What is EOF / “end-of-file”?
 
 
+
 ## Compilation
 * Files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
 
+
+
 ## Header File
 * `shell.h` will include all the prototypes of the functions.
+
+
+
 
 ## Tasks:
 
@@ -59,6 +65,7 @@ You don’t have to:
 * Handle command lines with arguments
 
 
+
 #### 4. Simple shell 0.3
 
 * Handle the PATH
@@ -69,6 +76,7 @@ You don’t have to:
 * Implement the exit built-in, that exits the shell
 * Usage: exit
 * You don’t have to handle any argument to the built-in exit
+
 
 #### 6. Simple shell 1.0
 

@@ -17,7 +17,7 @@
 
 .SH FILES
 
-.B main.h, execFind.c, shell.c, README.md, AUTHORS
+.B shell.h, shell_read_line, shell_get_line, shell_exec, simple_shell.c, README.md, AUTHORS
 
 .SH INSTALLATION
 
@@ -34,13 +34,13 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 .B To display the contents of a file, see example below. Write:
 
 .B ./hsh
-cat main.h
+cat shell.h
 
  #ifndef HEADER
  #define HEADER
- int execute(char **argv, char **env);
- char *checkFile(char *File, char *path);
- void strcut(char *str, char **res, int *p);
+ char **shell_split_line(char *line);
+ char *shell_read_line(void);
+ void shell_exec(char **args);
  #endif
 
 .B To display the list of all files in the current directory, write:
