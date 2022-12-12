@@ -18,8 +18,9 @@ int (*func)(void);
 
 } built_ins;
 
-void exit_function(char **args);
-int env_function(int ac, char **av, char **env);
+int find_builtins(char *args);
+void exit_function(void);
+int env_function(void);
 extern char **env;
 char **shell_split_line(char *line);
 char *shell_read_line(void);
