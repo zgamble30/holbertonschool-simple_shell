@@ -9,6 +9,7 @@
 #include <stdbool.h>
 #include "sys/wait.h"
 
+extern char **environ;
 
 typedef struct builtin
 {
@@ -18,10 +19,9 @@ int (*func)(void);
 
 } built_ins;
 
-int find_builtins(char *args);
-void exit_function(void);
+int (*find_builtins(char *args))();
+int exit_function(void);
 int env_function(void);
-extern char **env;
 char **shell_split_line(char *line);
 char *shell_read_line(void);
 void shell_exec(char **args);

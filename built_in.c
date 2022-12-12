@@ -4,7 +4,7 @@
 * returns the function name
 */
 
-int find_builtins(char *args)
+int (*find_builtins(char *args))()
 {
 	int i;
 
@@ -25,9 +25,10 @@ int find_builtins(char *args)
 	return (NULL);
 }
 
-void exit_function(void)
+int exit_function(void)
 {
 	exit(0);
+	return (0);
 }
 
 int env_function(void)
