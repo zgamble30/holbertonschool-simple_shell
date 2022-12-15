@@ -27,6 +27,12 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **av)
 
 		if (tokens[0] != NULL)
 		{
+			if (strcmp(tokens[0], "exit") == 0)
+			{
+				free(tokens);
+				free(line);
+				exit(0);
+			}
 			shell_exec(tokens);
 		}
 
