@@ -9,6 +9,19 @@
 #include <stdbool.h>
 #include "sys/wait.h"
 
+extern char **environ;
+
+typedef struct builtin
+{
+
+char *name;
+int (*func)(void);
+
+} built_ins;
+
+int (*find_builtins(char *args))();
+int exit_function(void);
+int env_function(void);
 char **shell_split_line(char *line);
 char *shell_read_line(void);
 void shell_exec(char **args);
