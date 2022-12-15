@@ -11,6 +11,13 @@
 
 extern char **environ;
 
+/**
+ * struct builtin - structure for builtin.
+ *
+ * @name: name to search.
+ * @func: function associated.
+ */
+
 typedef struct builtin
 {
 

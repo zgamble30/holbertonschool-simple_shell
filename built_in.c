@@ -1,8 +1,10 @@
 #include "shell.h"
+
 /**
-* built_ins is the function selector
-* returns the function name
-*/
+ * find_builtins - the function selector.
+ * @args: user input.
+ * Return: the function name or NULL for no match.
+ */
 
 int (*find_builtins(char *args))()
 {
@@ -25,15 +27,26 @@ int (*find_builtins(char *args))()
 	return (NULL);
 }
 
+/**
+ * exit_function - exit program.
+ * Return: 0.
+ */
+
 int exit_function(void)
 {
 	exit(0);
 	return (0);
 }
 
+/**
+ * env_function = prints current environment variables.
+ * Return: 0.
+ */
+
 int env_function(void)
 {
 	int i = 0;
+
 	while (env[i] != NULL)
 	{
 		printf("%s\n", env[i]);
