@@ -39,7 +39,7 @@ int exit_function(void)
 }
 
 /**
- * env_function = prints current environment variables.
+ * env_function - prints current environment variables.
  * Return: 0.
  */
 
