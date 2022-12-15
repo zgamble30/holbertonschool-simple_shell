@@ -34,9 +34,9 @@ int exit_function(void)
 int env_function(void)
 {
 	int i = 0;
-	while (env[i] != NULL)
+	while (environ[i] != NULL)
 	{
-		printf("%s\n", env[i]);
+		printf("%s\n", environ[i]);
 		i++;
 	}
 	return (0);
