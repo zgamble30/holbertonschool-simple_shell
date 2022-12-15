@@ -33,7 +33,12 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **av)
 				free(line);
 				exit(0);
 			}
-			shell_exec(tokens);
+			else if (strcmp(tokens[0], "env") == 0)
+			{
+				env_function();
+			}
+			else
+				shell_exec(tokens);
 		}
 
 		free(tokens);
